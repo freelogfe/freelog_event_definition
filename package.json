@@ -1,0 +1,19 @@
+{
+  "name": "freelog_event_definition",
+  "version": "0.0.1",
+  "description": "event definitions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freelogfe/freelog_event_definition.git"
+  },
+  "author": "Jin Xiao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freelogfe/freelog_event_definition/issues"
+  },
+  "homepage": "https://github.com/freelogfe/freelog_event_definition#readme"
+}
