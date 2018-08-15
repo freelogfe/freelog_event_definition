@@ -12,11 +12,11 @@ var readDef = function (){
 }
 
 var parseDef = function(){
-  readDef().then(
+  return readDef().then(
     (data) => {
       let lines = data.split(/\r?\n/);
       if (lines.length <= 1) {
-        reject('improper source');
+        throw 'improper source';
       }
       let attrs = lines[0].split('\,');
 
@@ -29,13 +29,20 @@ var parseDef = function(){
         }
         events.push(entry);
       });
-      console.log(events);
-      resolve(events);
+      return events;
     },
     (err) => {
-      reject(err);
+      throw err;
     }
   );
 }
 
-parseDef();
+parseDef()
+  .then(
+    (events)=>{
+      console.log(events);
+    },
+    (err)=>{
+      console.log(err);
+    }
+  );
