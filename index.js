@@ -32,7 +32,6 @@ var parseDef = (data) => {
 
 function EventDefinitions(){}
 
-
 EventDefinitions.JSONDef = function(){
   return importDef()
   .then(parseDef)
@@ -42,6 +41,14 @@ EventDefinitions.JSONDef = function(){
     });
   })
   .catch(err => console.log(err));
+}
+
+EventDefinitions.JSONDefSync = function(){
+  let data = fs.readFileSync(csv, 'utf8');
+  let events = parseDef(data);
+  return events.filter((item) => {
+    return item['Code'].length > 0;
+  });
 }
 
 exports.EventDefinitions = EventDefinitions;
