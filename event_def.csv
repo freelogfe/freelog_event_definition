@@ -1,11 +1,11 @@
 Code,Name,RuleName,Description,Params,singleton,
-S101,License Agreement,signing_event,acknowledge a resource,resource_id,TRUE,
-A101,Cycle End,cycle_end_event,raise when n cycle ends,n,FALSE,
-S201,Transaction,transaction_event,one time transaction,"contract_id payee payer amount",TRUE,
-S202,Settlement,settlement_event,fired when settlement cleared,contract_id,TRUE,
+S101,License Agreement,signing_event,acknowledge a resource,resourceId,TRUE,
+A101,Cycle End,cycle_end_event,raise when n cycle ends,cycleCount,FALSE,
+S201,Transaction,transaction_event,one time transaction,"contractId payee payer amount",TRUE,
+S202,Settlement,settlement_event,fired when settlement cleared,contractId,TRUE,
 A102,Fixed time,time_event,fired on a pre-determined time,time,FALSE,
 A103,Relative time,relative_time_event,fired when certain amount of time elapsed,elapsed,FALSE,
-S301,Number of consumption,access_count_event,"reserve a target number of authorizations, fires when such number reached",target_count,TRUE,
+S301,Number of consumption,access_count_event,"reserve a target number of authorizations, fires when such number reached",targetCount,TRUE,
 S210,Escrow requirement met,escrow_exceed_amount,,none,TRUE,
 S211,Escrow has been confiscated,escrow_confiscated,,none,TRUE,
 S212,Escrow has been refunded,escrow_refunded,,none,TRUE,
