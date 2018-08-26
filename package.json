@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/freelogfe/freelog_event_definition/issues"
   },
-  "homepage": "https://github.com/freelogfe/freelog_event_definition#readme"
+  "homepage": "https://github.com/freelogfe/freelog_event_definition#readme",
+  "devDependencies": {
+    "papaparse": "^4.6.0"
+  }
 }
