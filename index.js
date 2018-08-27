@@ -1,5 +1,6 @@
 
 const fs = require('fs');
+const pparse = require('papaparse').parse;
 
 var csv = __dirname + '/event_def.csv'
 
@@ -45,7 +46,8 @@ EventDefinitions.JSONDef = function(){
 
 EventDefinitions.JSONDefSync = function(){
   let data = fs.readFileSync(csv, 'utf8');
-  let events = parseDef(data);
+  let events = pparse(data, {header: true}).data;
+  console.log(events);
   return events.filter((item) => {
     return item['Code'].length > 0;
   });
