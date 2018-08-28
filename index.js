@@ -49,7 +49,6 @@ EventDefinitions.JSONDef = function(){
 EventDefinitions.JSONDefSync = function(){
   let data = fs.readFileSync(csv, 'utf8');
   let events = pparse(data, {header: true}).data;
-  console.log(events);
   return events.filter((item) => {
     return item['Code'].length > 0;
   });
