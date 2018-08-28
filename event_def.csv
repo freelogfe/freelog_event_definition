@@ -1,5 +1,5 @@
 Code,Name,RuleName,Description,Params,singleton
-S101,License Agreement,signing_event,acknowledge a resource,resource_id,TRUE
+S101,License Agreement,signing_event,acknowledge a resource,license_resource_id,TRUE
 A101,Cycle End,cycle_end_event,raise when n cycle ends,TIMEUNIT,FALSE
 S201,Transaction,transaction_event,one time transaction,"transaction_amount,account",TRUE
 S202,Settlement,settlement_event,fired when settlement cleared,account,TRUE

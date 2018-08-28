@@ -1,6 +1,6 @@
 {
   "name": "freelog_event_definition",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "event definitions",
   "main": "index.js",
   "scripts": {
