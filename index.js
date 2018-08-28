@@ -12,6 +12,8 @@ var importDef = function (){
   });
 }
 
+//deprecated parse function, has bug (cant parse comma within quotes properly)
+//to be rewrite once getting rid of papaparse dependency become necessary
 var parseDef = (data) => {
   let lines = data.split(/\r?\n/);
   if (lines.length <= 1) {
